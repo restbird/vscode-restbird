@@ -4,7 +4,7 @@ import { MIME } from '../models/mime';
 const mime = require('mime-types');
 
 export class MimeUtility {
-    private static readonly supportedImagesFormats = [
+    private static readonly browserSupportedImagesFormats = [
         'image/jpeg',
         'image/gif',
         'image/webp',
@@ -42,7 +42,7 @@ export class MimeUtility {
         }
 
         let type = MimeUtility.parse(contentTypeString).type;
-        return MimeUtility.supportedImagesFormats.includes(type);
+        return MimeUtility.browserSupportedImagesFormats.includes(type);
     }
 
     public static isJSON(contentTypeString: string): boolean {

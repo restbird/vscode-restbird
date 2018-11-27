@@ -52,6 +52,8 @@ Restbird Debugger extension allows you to debug test scripts (written in GoLang,
     {
         "go.gopath" : "[Your Restbird project directory]/sandbox/tmp:[Your Restbird project directory]/sandbox/tmp/src/restbirdlib",
     }  
+   ``` 
+  ![Setup GoPath](/images/SettingGoPath.gif)
 * Install [Delve debugger](https://github.com/derekparker/delve) for Debugging GoLang
   
   And ensure it is in your "GOPATH/bin" or "PATH".

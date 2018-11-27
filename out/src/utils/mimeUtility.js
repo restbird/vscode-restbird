@@ -29,7 +29,7 @@ class MimeUtility {
             return false;
         }
         let type = MimeUtility.parse(contentTypeString).type;
-        return MimeUtility.supportedImagesFormats.includes(type);
+        return MimeUtility.browserSupportedImagesFormats.includes(type);
     }
     static isJSON(contentTypeString) {
         if (!contentTypeString) {
@@ -76,7 +76,7 @@ class MimeUtility {
         return MimeUtility.parse(contentTypeString).type === 'application/x-www-form-urlencoded';
     }
 }
-MimeUtility.supportedImagesFormats = [
+MimeUtility.browserSupportedImagesFormats = [
     'image/jpeg',
     'image/gif',
     'image/webp',
