@@ -6,9 +6,7 @@ Restbird Debugger extension allows you to debug test scripts (written in GoLang,
 
 >By simply right click and choose "Restbird: Debug Restbird script"
 
-[feature X](images/SettingGoPath.gif)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+ ![Running Debug](/images/DebugRestGo.gif)
 
 ## Supported platform and language
 ### Linux 
@@ -71,6 +69,9 @@ Restbird Debugger extension allows you to debug test scripts (written in GoLang,
         "env": {},
         "args": []
     }
+    ```
+   ![Setup Debug Configuration](/images/settingdebug.gif)
+
 * Open the Go file you want to debug and right click then chooe "Restbird: Debug Restbird script"
   
   main.go will be generated under [your Restbird project directory]/sandbox/tmp/src/restbird-[rest/mock/task]
@@ -83,9 +84,19 @@ Restbird Debugger extension allows you to debug test scripts (written in GoLang,
 
   Below command has been tested in ubuntu 16.04
 ````
+    apt-get install python3
     apt-get install python3-pip
     pip3 install --user pipenv
+    pip3 install requests
 ````
+
+* Setup pythonPath in VSCode to use python3 
+
+```
+    {
+        "python.pythonPath": "Path to your python3, e.g. /usr/bin/python3"
+    }
+```
 * Configure debug in VSCode: Sample Debug Configuration (launch.json)
 ```
     {
@@ -93,7 +104,6 @@ Restbird Debugger extension allows you to debug test scripts (written in GoLang,
         "type": "python",
         "request": "launch",
         "program": "${file}",
-        "pythonPath": "/usr/bin/python3.5", 
     }
 ````
      

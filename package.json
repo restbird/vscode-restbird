@@ -84,38 +84,18 @@
         "@types/mocha": "^2.2.32",
         "@types/node": "^8.10.25",
         "mocha": "^3.2.0",
-        "tslint": "^5.10.0",
         "typescript": "^2.9.2",
-        "vscode": "^1.0.0"
+        "vscode": "^1.1.22"
     },
     "dependencies": {
-        "adal-node": "^0.1.26",
-        "applicationinsights": "^1.0.2",
-        "autolinker": "^1.4.0",
-        "clipboardy": "^1.2.3",
-        "code-highlight-linenums": "^0.2.1",
-        "combined-stream": "^1.0.5",
         "elegant-spinner": "^1.0.1",
         "encodeurl": "^1.0.1",
         "filesize": "^3.3.0",
         "fs-extra": "^5.0.0",
-        "highlight.js": "^9.6.0",
-        "http-proxy-agent": "^2.1.0",
-        "https-proxy-agent": "^2.2.1",
-        "httpsnippet": "^1.16.5",
         "iconv-lite": "^0.4.15",
         "js-beautify": "^1.7.5",
-        "jshint": "^2.9.6",
-        "jsonpath": "^1.0.0",
         "mime-types": "^2.1.14",
-        "moment": "^2.20.1",
-        "node-uuid": "^1.4.7",
         "pretty-data": "^0.40.0",
-        "request": "^2.81.0",
-        "tmp": "^0.0.31",
-        "tough-cookie-file-store-bugfix": "Huachao/tough-cookie-file-store-bugfix",
-        "xmldom": "^0.1.27",
-        "xpath": "0.0.27",
-        "yargs": "^6.0.0"
+        "request": "^2.81.0"
     }
 }
