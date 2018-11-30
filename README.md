@@ -8,9 +8,12 @@ Restbird Debugger extension allows you to debug test scripts (written in GoLang,
 
  ![Running Debug](/images/DebugRestGo.gif)
 
+>You also get the side befefit of Syntax check VSCode offered
+
+![GoLang Synxtax Check](/images/SyntaxCheckGo.gif)
 ## Supported platform and language
 ### Linux 
-* GoLang (go version go1.10.4 linux/amd64)
+* GoLang (go version go1.10.2 linux/amd64)
 * Python (python3)
 * Javascript
 ### MacOS
@@ -37,10 +40,10 @@ Restbird Debugger extension allows you to debug test scripts (written in GoLang,
 
   For the reason that Restbird is compiled with Go version 1.10.4, so in the initial release we'll only support debugging with the same Golang version.
 
-  We will support other Go versions later 
+  We will support other Go versions later
 
-  [Download the archieve]( https://golang.org/doc/install?download=go1.10.4.linux-amd64.tar.gz) and extract it into /usr/local, creating a Go tree in /usr/local/go. For example: 
-  > tar -C /usr/local -xzf go1.10.4.linux-amd64.tar.gz
+  [Download the archieve](https://golang.org/doc/install?download=go1.10.2.linux-amd64.tar.gz) and extract it into /usr/local, creating a Go tree in /usr/local/go. For example: 
+  > tar -C /usr/local -xzf go1.10.2.linux-amd64.tar.gz
  
 * Setup GoPath in VSCode
 
@@ -106,9 +109,23 @@ Restbird Debugger extension allows you to debug test scripts (written in GoLang,
         "program": "${file}",
     }
 ````
-     
-  > "pythonPath" only need to be set when "python" ommand has been set to 2.x in your system
+  ![config python debug](/images/SettingPythonDbg.gif)
 
+> Restbird also support to use pipenv, Pipfile is shiped with debug package inside [Your path to Restbird project]/sandbox/tmp/ directory when you Run debug of Python script
+
+* pipenv install
+* pipenv --venv
+![run pipenv](/images/Pipenv.gif)
+  To get the virtal env path
+* Setup pythonPath in VSCode to use python3 
+
+```
+    {
+        "python.pythonPath": "Path to your virtaul env, e.g. /User/restbird/.local/share/virtualenvs/restbird-BKBCD7Kk"
+    }
+```  
+  ![set pythonPath](/images/SettingPythonPath.gif)
+  
 #### Javascript
 * Ensure [Node.js](https://nodejs.org/en/) has been installed in your system
 
