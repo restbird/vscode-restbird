@@ -104,7 +104,7 @@ function getAPIPath() {
         let pathObj = pathutil.parse(path);
         let idx = pathObj.dir.indexOf(restbirdPathStart);
         if (idx != -1) {
-            localProjectPath = path.substring(0, idx);
+            localProjectPath = path.substring(0, idx - 1);
             let caseInfo = getCaseType(resource.fsPath);
             if (caseInfo.result) {
                 caseType = caseInfo.caseType;
