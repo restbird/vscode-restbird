@@ -2,7 +2,7 @@
     "name": "vscode-restbird",
     "displayName": "Restbird Debugger",
     "description": "",
-    "version": "0.14.0",
+    "version": "0.15.0",
     "publisher": "Restbird",
     "icon": "images/restbird_icon_2.png",
     "galleryBanner": {
