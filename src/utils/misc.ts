@@ -131,16 +131,16 @@ export function getAPIPath(): {caseType: string; casepath: string; api:string; l
                     result = true;
                     return { caseType, casepath, api, localProjectPath, result, message };
                 }else{ 
-                    // if(caseType == "mock"){
-                    //     const mockTaskPathEnd = '/mocktask.go';
-                    //     let idx = path.indexOf(mockTaskPathEnd);
-                    //     if(idx != -1){
-                    //         casepath = path.substring(0, idx);
-                    //         result = true;
-                    //         return{caseType, casepath, api, localProjectPath, result, message};
-                    //     }
-                    // }else 
-                    if(caseType = "task"){
+                    if(caseType == "mock"){
+                         const mockTaskPathEnd = 'mocktask.';
+                         let idx = path.indexOf(mockTaskPathEnd);
+                         if(idx != -1){
+                             casepath = path.substring(0, idx-1);
+                             result = true;
+                             return{caseType, casepath, api, localProjectPath, result, message};
+                         }
+                    } 
+                    else if(caseType = "task"){
                         const mockTaskPathEnd = 'task.go';
                         const taskfilename = 'task';
                         if(pathObj.name == taskfilename){
