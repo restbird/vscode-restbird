@@ -20,11 +20,11 @@ export class HttpResponseTextDocumentView {
     }
 
     private getTextDocumentContent(response: HttpResponse): string {
-        let content = '';
+        let content = 'Status Code: ' + response.statusCode.toString();
        
-            const responseContentType = response.getHeader('content-type');
-            const prefix = EOL;
-            content += `${prefix}${ResponseFormatUtility.formatBody(response.body, responseContentType, true)}`;
+        const responseContentType = response.getHeader('content-type');
+        const prefix = EOL;
+        content += `${prefix}${ResponseFormatUtility.formatBody(response.body, responseContentType, true)}`;
 
         return content;
     }

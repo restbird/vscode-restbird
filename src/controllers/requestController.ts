@@ -109,6 +109,9 @@ export class RequestController {
                         window.showErrorMessage(`Failed to generate debug files, please check your Restbird docker ersion, Restbird begins to support debug from v3.0 and onwards`)
                     }   
                 }
+            }else if(response.statusCode == 401){
+                window.showErrorMessage(`401, Authentication error, please check your settings and config the correct Restbird user credential, the default is admin/admin`)
+
             }
             const activeColumn = window.activeTextEditor.viewColumn;
             this._textDocumentView.render(response, activeColumn);
